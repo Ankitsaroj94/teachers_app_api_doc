@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Staff Leave Tracker",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

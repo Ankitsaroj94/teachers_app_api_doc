@@ -1,0 +1,36 @@
+meta {
+  name: Form16Detail
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{staffBase}}SMT/Form16Detail
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "StaffId": 1626,
+      "EmployeeNo": 10800,
+      "WorksheetNo": 89528,
+      "SignSysId": 0,
+      "DigitalFlag": "Y",
+      "PrintDate": "31-Mar-2025",
+      "LocationId": 2,
+      "Year": "2024",
+      "SiteId": 2,
+      "UserSysId": 555
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

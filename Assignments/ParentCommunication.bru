@@ -1,0 +1,33 @@
+meta {
+  name: ParentCommunication
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/ParentCommunication
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "SessionId": 640,
+  "UserSysId": 55895,
+  "StaffId": 0,
+  "Type": "ALL",
+  "FormId": 428, 
+  "ClassId": 1248,
+  "StaffId":6058
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

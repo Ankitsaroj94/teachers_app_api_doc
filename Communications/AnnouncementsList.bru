@@ -1,0 +1,27 @@
+meta {
+  name: AnnouncementsList
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{staffBase}}SMT/AnnouncementsList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "UserSysId": 555,
+  "SessionId": 640
+  }
+}
+
+settings {
+  encodeUrl: true
+}

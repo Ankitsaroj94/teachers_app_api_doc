@@ -1,0 +1,24 @@
+info:
+  name: Staff Profile
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StaffProfile"
+  body:
+    type: json
+    data: |-
+      {
+        "StaffId": 20868,
+        "UserSysId": 12,
+        "SiteId": 18,
+        "SessionId": 656
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

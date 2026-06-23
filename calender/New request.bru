@@ -1,0 +1,33 @@
+meta {
+  name: New request
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/Calendar
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": {{SITEID}},
+  "SessionId": {{ACADYEAR}},
+  "UserSysId": {{USERSYSID}},
+  "Date": "01 JAN 2025",
+  "FormId": 0, 
+  "Category":"A"
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

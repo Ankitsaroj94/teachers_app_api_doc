@@ -1,0 +1,26 @@
+meta {
+  name: AnnouncementDashBoard
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/AnnouncementDashBoard
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

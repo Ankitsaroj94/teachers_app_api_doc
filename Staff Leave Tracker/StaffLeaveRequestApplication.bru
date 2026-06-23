@@ -1,0 +1,28 @@
+meta {
+  name: StaffLeaveRequestApplication
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/StaffLeaveRequestApplication
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 555,
+      "SiteId": 2,
+      "AsOnDate": "Wednesday — 21 May ",
+      "Type": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

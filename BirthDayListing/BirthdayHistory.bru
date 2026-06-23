@@ -1,0 +1,27 @@
+meta {
+  name: BirthdayHistory
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/BirthdayHistory
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": {{USERSYSID}},
+      "Type": "staff",
+      "SiteId": {{SITEID}}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

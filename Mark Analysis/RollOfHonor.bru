@@ -1,0 +1,33 @@
+meta {
+  name: RollOfHonor
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/RollOfHonor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SessionId": 423,
+      "Year": "2023",
+      "FormId": "263",
+      "ClassId": "863",
+      "SubjectId": "919",
+      "ExamTypeID": "47",
+      "ElementId": "89",
+      "AssessmentId": "0"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

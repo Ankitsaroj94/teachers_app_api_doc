@@ -1,0 +1,27 @@
+meta {
+  name: StaffList
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{staffBase}}SMT/StaffList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SessionId": 640,
+  "SiteId": 47,
+  "UserSysId": 121173
+  }
+}
+
+settings {
+  encodeUrl: true
+}

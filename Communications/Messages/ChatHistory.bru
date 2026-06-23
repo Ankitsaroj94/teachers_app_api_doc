@@ -1,0 +1,30 @@
+meta {
+  name: ChatHistory
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/ChatHistory
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 555,
+      "SiteId": 47,
+      "SessionId": 640,
+      "RecipientType": "S",
+      "StaffSysId": 14906,
+      "StudentId": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+}

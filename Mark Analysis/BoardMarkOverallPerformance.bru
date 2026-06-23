@@ -1,0 +1,27 @@
+meta {
+  name: BoardMarkOverallPerformance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/BoardMarkOverallPerformance
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "FormId": 306,
+      "SessionId": 525,
+      "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

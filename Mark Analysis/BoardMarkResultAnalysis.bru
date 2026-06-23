@@ -1,0 +1,27 @@
+meta {
+  name: BoardMarkResultAnalysis
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{staffBase}}SMT/BoardMarkResultAnalysis
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "FormId": 306,
+      "SessionId": 525,
+      "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

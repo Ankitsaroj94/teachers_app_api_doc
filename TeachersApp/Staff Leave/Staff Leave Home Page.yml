@@ -1,0 +1,22 @@
+info:
+  name: Staff Leave Home Page
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StaffLeaveHomePage"
+  body:
+    type: json
+    data: |-
+      {
+        "UserSysId": 555,
+        "SiteId": 18
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

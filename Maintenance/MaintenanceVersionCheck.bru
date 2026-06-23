@@ -1,0 +1,72 @@
+meta {
+  name: MaintenanceVersionCheck
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{staffBase}}Authentication/MaintenanceVersionCheck
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "AppName": "SHRICONNECTV2",
+      "VersionNumber": "1.0.0",
+      "DeviceType": "A"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: MaintenanceVersionCheck
+  
+  request: {
+    url: {{staffBase}}Authentication/MaintenanceVersionCheck
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "AppName": "SHRICONNECTV2",
+          "VersionNumber": "1.0.0",
+          "DeviceType": "A"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Length: 173
+      Content-Type: application/json
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Mon, 16 Feb 2026 06:07:14 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        [
+            {
+                "ReturnNumber": 1,
+                "ReturnMessage": "Data Retrieved Successfully!",
+                "Maintenance": "N",
+                "MaintenanceMessage": null,
+                "VersionUpdate": "S",
+                "VersionNumber": "1.0.0",
+                "DownloadLink": ""
+            }
+        ]
+      '''
+    }
+  }
+}

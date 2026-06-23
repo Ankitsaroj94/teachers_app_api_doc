@@ -1,0 +1,27 @@
+meta {
+  name: StudentPersonalityTraits
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/StudentPersonalityTraits
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "StudentId": 175949,
+  "SessionId": 0,
+  "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

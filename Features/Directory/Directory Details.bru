@@ -1,0 +1,33 @@
+meta {
+  name: Directory Details
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/DirectoryDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "StaffId": 0,
+      "Type": "staff"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  {  
+  "StaffId": 0, \[If Staff is selected, StudentId – if Student is selected\]  
+  "Type": "staff" \[student – if Student is selected\]  
+  }
+}

@@ -1,0 +1,28 @@
+meta {
+  name: New request
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/CircularNotice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "CircularNoticeId": 89001,
+  "UserSysId": 55895,
+  "Type": "C",
+  "SiteId": 47
+  }
+}
+
+settings {
+  encodeUrl: true
+}

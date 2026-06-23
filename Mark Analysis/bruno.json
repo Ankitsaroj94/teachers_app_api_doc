@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Mark Analysis",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

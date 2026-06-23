@@ -1,0 +1,29 @@
+meta {
+  name: ChatList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/ChatList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 47,
+      "UserSysId": 555,
+      "StaffId": 123,
+      "Type": "S",
+      "SessionId": 640
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: FeeAnalysis
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/FeeAnalysis
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": {{SITEID}},
+      "SessionId": {{ACADYEAR}},
+      "UserSysId": {{USERSYSID}},
+      "AcademicYear":2025
+  }
+}
+
+settings {
+  encodeUrl: true
+}

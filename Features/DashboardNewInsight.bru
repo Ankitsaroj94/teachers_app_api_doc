@@ -1,0 +1,29 @@
+meta {
+  name: DashboardNewInsight
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{staffBase}}SMT/SMTDashboardInsights
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": {{SITEID}},
+      "SessionId": {{ACADYEAR}},
+      "StaffId": {{STAFFID}},
+      "UserSysId": {{USERSYSID}},
+      "AccessLevel": {{AccessLevel}}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

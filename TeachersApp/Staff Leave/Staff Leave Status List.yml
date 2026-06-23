@@ -1,0 +1,23 @@
+info:
+  name: Staff Leave Status List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StaffLeaveStatusList"
+  body:
+    type: json
+    data: |-
+      {
+        "UserSysId": 555,
+        "SiteId": 18,
+        "ListingType": "Approved"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

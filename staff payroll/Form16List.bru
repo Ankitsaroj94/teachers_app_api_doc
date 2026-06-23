@@ -1,0 +1,27 @@
+meta {
+  name: Form16List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/Form16List
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 2,
+      "StaffId": 1626,
+      "UserSysId": 616
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: BoardMarkTrendAnalysis
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{staffBase}}SMT/BoardMarkTrendAnalysis
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 18,
+      "SessionId": 656,
+      "FormId": 486,
+      "OrgId": 12
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: StaffLeaveRequestDetail
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/StaffLeaveRequestDetail
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 14906,
+      "SiteId": 2,
+      "LeaveId": 437360
+  }
+}
+
+settings {
+  encodeUrl: true
+}

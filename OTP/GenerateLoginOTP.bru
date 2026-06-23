@@ -1,0 +1,27 @@
+meta {
+  name: GenerateLoginOTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{staffBase}}SMT/GenerateLoginOTP
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "StaffNo": "100",
+  "ContactDetail": "mohamed.suhaib@srf.com",
+  "SchoolCode": "ABC"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

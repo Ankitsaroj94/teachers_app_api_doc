@@ -1,0 +1,27 @@
+meta {
+  name: BirthDayListing
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/BirthdayList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 555,
+      "Type": "student",
+      "SiteId": 47
+  }
+}
+
+settings {
+  encodeUrl: true
+}

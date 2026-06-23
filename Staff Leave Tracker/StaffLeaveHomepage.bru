@@ -1,0 +1,26 @@
+meta {
+  name: StaffLeaveHomepage
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StaffLeaveHomepage
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 555,
+      "SiteId": 47
+  }
+}
+
+settings {
+  encodeUrl: true
+}

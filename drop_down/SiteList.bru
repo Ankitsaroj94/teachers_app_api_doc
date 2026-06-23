@@ -1,0 +1,28 @@
+meta {
+  name: SiteList
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/SiteList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "OrgId": 31,
+      "StaffId": 0,
+      "UserSysId": 121173,
+      "AccessLevel": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}

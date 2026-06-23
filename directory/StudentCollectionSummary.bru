@@ -1,0 +1,28 @@
+meta {
+  name: StudentCollectionSummary
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/StudentCollectionSummary
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 18,
+  "SessionId": 656,
+  "StudentId": 24760,
+  "UserSysId": 121173
+  }
+}
+
+settings {
+  encodeUrl: true
+}

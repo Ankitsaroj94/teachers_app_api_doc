@@ -1,0 +1,48 @@
+meta {
+  name: PostAnnouncement
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{staffBase}}SMT/PostAnnouncement
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  [
+       {
+            "StartDate": "19 FEB 2026"
+       },
+       {
+            "Title": "test"
+       },
+       {
+            "Message": "dsf"
+       },
+       {
+            "OrgId": "31"
+       },
+       {
+            "UserSysId": "14906"
+       },
+       {
+            "Type": "Student"
+       },
+       {
+            "SiteId": "47"
+       },
+       {
+            "Attachments": "a4ce918c-3cb4-4c61-b76e-0ca74e467fb97601647496642449912.jpg"
+       }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

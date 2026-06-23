@@ -1,0 +1,24 @@
+info:
+  name: Student Profile
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StudentProfile"
+  body:
+    type: json
+    data: |-
+      {
+        "StudentId": 51581,
+        "UserSysId": 12,
+        "SiteId": 18,
+        "SessionId": 656
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

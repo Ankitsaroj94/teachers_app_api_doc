@@ -1,0 +1,30 @@
+meta {
+  name: ClassList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/ClassList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "StaffId": 0,
+      "SiteId": 47,
+      "SessionId": 640,
+      "AccessLevel": 10,
+      "FormId": 0,
+      "UserSysId": 121173
+  }
+}
+
+settings {
+  encodeUrl: true
+}

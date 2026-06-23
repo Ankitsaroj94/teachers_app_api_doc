@@ -1,0 +1,26 @@
+meta {
+  name: BrowseMenuList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/BrowseMenuList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

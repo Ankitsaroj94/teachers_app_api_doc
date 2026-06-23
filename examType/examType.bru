@@ -1,0 +1,27 @@
+meta {
+  name: examType
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/ExamTypesList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "SiteId": 18,
+       "UserSysId": 2369,
+       "SessionId": 656
+  }
+}
+
+settings {
+  encodeUrl: true
+}

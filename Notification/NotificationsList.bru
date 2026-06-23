@@ -1,0 +1,27 @@
+meta {
+  name: NotificationsList
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/NotificationsList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": {{SITEID}},
+  "UserSysId": {{USERSYSID}},
+  "StaffId": {{STAFFID}}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

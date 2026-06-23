@@ -1,0 +1,29 @@
+meta {
+  name: StudentAcademicPerformance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/StudentAcademicPerformance
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "StudentId": 32010,
+  "SessionId": 656,
+  "ExamForm": "191,192,193,194,195,196,197,207,249",
+  "ExamSubject": "625,627,628,629,630,631,633,650,1848,2099",
+  "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

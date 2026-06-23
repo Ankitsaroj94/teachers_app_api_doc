@@ -1,0 +1,27 @@
+meta {
+  name: StudentParticipatedEvents
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/StudentParticipatedEvents
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "StudentId": 88510,
+  "SessionId": 640,
+  "UserSysId": 555
+  }
+}
+
+settings {
+  encodeUrl: true
+}

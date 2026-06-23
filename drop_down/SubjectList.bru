@@ -1,0 +1,30 @@
+meta {
+  name: SubjectList
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/SubjectList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+   "FormId": 428,
+  "StaffId": 47,
+  "SessionId": 640,
+  "SiteId": 47,
+  "AccessLevel": 10,
+  "UserSysId": 121173
+  }
+}
+
+settings {
+  encodeUrl: true
+}

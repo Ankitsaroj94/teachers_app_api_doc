@@ -1,0 +1,37 @@
+meta {
+  name: PostWish
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{staffBase}}SMT/PostWish
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "StaffId": 6058,
+      "SiteId": 47,
+      "UserSysId": 14906,
+      "BirthdayWish": "Test Birthday Wish!",
+      "Type": "student",
+      "BirthdayStudentDetails": [
+          {
+              "StudentId": 51685,
+              "StudentName": "Aashi Sehrawat",
+              "UserSysId": 83474
+          }
+        
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

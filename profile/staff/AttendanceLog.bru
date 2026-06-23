@@ -1,0 +1,29 @@
+meta {
+  name: AttendanceLog
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/AttendanceLog
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "UserSysId": 555,
+  "StaffId": 8258,
+  "FromDate": "1 Jan 2025",
+  "ToDate": "30 Jan 2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

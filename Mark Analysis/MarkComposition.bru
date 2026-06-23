@@ -1,0 +1,31 @@
+meta {
+  name: MarkComposition
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/MarkComposition
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": "5",
+      "SessionId": "515",
+      "FormId": "43",
+      "TermId": "14",
+      "StaffId": "0",
+      "SuperSubjectId": "269",
+      "UserSysId": "555"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

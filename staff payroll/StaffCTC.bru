@@ -1,0 +1,28 @@
+meta {
+  name: StaffCTC
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StaffCTC
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "StaffId": 8269,
+      "UserSysId": 107217,
+      "SiteId": 47,
+      "AsOnDate": "27-Oct-2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

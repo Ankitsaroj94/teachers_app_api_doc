@@ -1,0 +1,29 @@
+meta {
+  name: FormList
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/FormList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 47,
+      "SessionId": 640,
+      "StaffId": 0,
+      "UserSysId": 121173,
+      "AccessLevel": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,34 @@
+meta {
+  name: SchoolDirectory
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/SchoolDirectory
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "StaffId": 12241,
+       "SiteId": 67,
+       "SessionId": 698,
+       "UserSysId": 121106,
+       "Type": "student",
+       "SearchKeyword": "",
+       "FormId": 0,
+       "ClassId": 0,
+       "SubjectId": 0,
+       "HouseId": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+}

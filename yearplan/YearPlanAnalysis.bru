@@ -1,0 +1,29 @@
+meta {
+  name: YearPlanAnalysis
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/YearPlanAnalysis
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "UserSysId": 555,
+  "FormId": 0,
+  "ClassId": 0,
+  "SessionId": 691,
+  "SiteId": 47
+  }
+}
+
+settings {
+  encodeUrl: true
+}

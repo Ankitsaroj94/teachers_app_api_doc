@@ -1,0 +1,33 @@
+meta {
+  name: Improvement
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/Improvement
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": "26",
+      "SessionId": "423",
+      "Formid": "263",
+      "ExamTypeID": "47",
+      "PrevSessionId": "423",
+      "PrevFormid": "263",
+      "PrevExamTypeID": "48",
+      "Percentage": "0",
+      "SubjectId": "919"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,193 @@
+meta {
+  name: Staff Login
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{staffBase}}Authentication/Login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "userid": "tarun.agarwal",
+      "password": "Abc@1234",
+      "orgname": "ABC",
+      "deviceid": "123654987651",
+      "devicetype": "A",
+      "devicename": "Realme 10 pro +",
+      "devicemodel": "RMX3663",
+      "deviceosversion": "Android 13",
+       "FCMToken": "dNt5w1W0R9C-Higf9KNHiQ:APA91bHrVkDFHHToqmWcGvo6GZvZfDyYF5kj0cHG2E-6QwoAh1Db4Xk1_TkWNBAL46AUX5a2wctZddZIo4tSARMxlpNcKc6GhhZIk9xIkgzo-A4hKQYjT50",
+       "AppVersion": "1.1.0"
+  }
+}
+
+script:post-response {
+  let response = res.getBody();
+  
+  if (Array.isArray(response) && response.length > 0) {
+      const data = response[0];
+  
+      const mappings = {
+          jwtToken: "staffToken",
+          STAFFID: "STAFFID",
+          SITEID: "SITEID",
+          ORGID: "ORGID",
+          ACADYEAR: "ACADYEAR",
+          USERSYSID: "USERSYSID",
+          USERID: "USERID",
+          LOCID: "LOCID",
+          AccessLevel: "AccessLevel",
+          StaffNumber: "StaffNumber"
+      };
+  
+      Object.entries(mappings).forEach(([key, envKey]) => {
+          if (data[key] !== undefined && data[key] !== null) {
+              bru.setEnvVar(envKey, data[key]);
+              console.log(`✅ ${envKey} updated:`, data[key]);
+          }
+      });
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Staff Login
+  
+  request: {
+    url: {{staffBase}}Authentication/Login
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "userid": "demo.teacher",
+          "password": "430206",
+          "orgname": "ABC",
+          "deviceid": "123654987651",
+          "devicetype": "A",
+          "devicename": "Realme 10 pro +",
+          "devicemodel": "RMX3663",
+          "deviceosversion": "Android 13"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Length: 636
+      Content-Type: application/json
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Mon, 25 Aug 2025 07:32:48 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        [
+            {
+                "USERSYSID": 55895,
+                "USERID": "demo.teacher",
+                "STAFFID": 0,
+                "SITEID": 47,
+                "ORGID": 31,
+                "STAFFNAME": "demo teacher",
+                "ACADYEAR": 640,
+                "ACADNAME": "2025-2026",
+                "RM": "Login successfully",
+                "LOCID": 39,
+                "AccessLevel": 40,
+                "OrgLogo": "https://www.shriconnect.net/scfile/logo/login/Abc.png",
+                "StaffNumber": 0,
+                "hrflag": "Y",
+                "payrollflag": "Y",
+                "Rn": 1,
+                "PhotoPath": "https://shriconnect.net/scfile/photo/Staff/Noimage.jpg",
+                "ReturnNumber": 1,
+                "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZW1vLnRlYWNoZXIiLCJlbWFpbCI6WyI0MzAyMDYiLCJBQkMiXSwiZXhwIjoxNzU2MTEwNzY5LCJpc3MiOiJTdGFmZkFwcFYyIiwiYXVkIjoiU3RhZmZBcHBWMiJ9.RVaiRoznSiFnwyMBTrulxXL2N6A6Fly4VDJ3IVIm9rI"
+            }
+        ]
+      '''
+    }
+  }
+}
+
+example {
+  name: Staff Login
+  
+  request: {
+    url: {{staffBase}}Authentication/Login
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "userid": "demo.teacher",
+          "password": "695574",
+          "orgname": "ABC",
+          "deviceid": "123654987651",
+          "devicetype": "A",
+          "devicename": "Realme 10 pro +",
+          "devicemodel": "RMX3663",
+          "deviceosversion": "Android 13"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Length: 724
+      Content-Type: application/json
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Fri, 19 Dec 2025 06:38:39 GMT
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        [
+            {
+                "USERSYSID": 55895,
+                "USERID": "demo.teacher",
+                "STAFFID": 0,
+                "SITEID": 47,
+                "ORGID": 31,
+                "STAFFNAME": "demo teacher",
+                "ACADYEAR": 640,
+                "ACADNAME": "2025-2026",
+                "RM": "Login successfully",
+                "LOCID": 39,
+                "AccessLevel": 40,
+                "OrgLogo": "https://www.shriconnect.net/scfile/logo/login/Abc.png",
+                "StaffNumber": 0,
+                "hrflag": "Y",
+                "payrollflag": "Y",
+                "Rn": 1,
+                "PhotoPath": "https://shriconnect.net/scfile/photo/Staff/Noimage.jpg",
+                "SchoolLogo": "https://www.shriconnect.net/mobilelogo/ABC.png",
+                "SchoolName": "ABC School",
+                "ReturnNumber": 1,
+                "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZW1vLnRlYWNoZXIiLCJlbWFpbCI6WyI2OTU1NzQiLCJBQkMiXSwiZXhwIjoxNzY2MTI5OTIwLCJpc3MiOiJTdGFmZkFwcFYyIiwiYXVkIjoiU3RhZmZBcHBWMiJ9.IFySbYLGODEHwiG4b6GSGeExQbbOkHwzUCQnCCdMa_4"
+            }
+        ]
+      '''
+    }
+  }
+}

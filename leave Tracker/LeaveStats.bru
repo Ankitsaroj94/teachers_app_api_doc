@@ -1,0 +1,28 @@
+meta {
+  name: LeaveStats
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/LeaveStats
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "UserSysId": 555,
+  "StaffId": 20563,
+  "SiteId": 74,
+  "Filter": "request" 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

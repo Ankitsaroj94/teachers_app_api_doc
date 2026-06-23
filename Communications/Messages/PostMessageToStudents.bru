@@ -1,0 +1,34 @@
+meta {
+  name: PostMessageToStudents
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{staffBase}}SMT/PostMessageToStudents
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:multipart-form {
+  AttachmentFiles: @file(postman-cloud:///1f0eac7b-de44-42d0-bdfe-acc9069cb44c)
+  Message: test msg
+  StudentId: 0
+  ClassId: 1242
+  FormId: 428
+  UserSysId: 14906
+  StaffId: 6058
+  SubjectId: 0
+  SiteId: 47
+  SessionId: 640
+  RecipientType: P
+  PostId: 0
+}
+
+settings {
+  encodeUrl: true
+}

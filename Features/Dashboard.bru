@@ -1,0 +1,29 @@
+meta {
+  name: Dashboard
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/SMTDashboard
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": {{SITEID}},
+      "SessionId": {{ACADYEAR}},
+      "StaffId": {{STAFFID}},
+      "UserSysId": {{USERSYSID}},
+      "AccessLevel": {{AccessLevel}}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

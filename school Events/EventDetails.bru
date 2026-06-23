@@ -1,0 +1,29 @@
+meta {
+  name: EventDetails
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/EventDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "UserSysId": 555,
+  "SiteId": 47,
+  "SessionId": 640,
+  "ClassId": 0,
+  "EventId": 6418
+  }
+}
+
+settings {
+  encodeUrl: true
+}

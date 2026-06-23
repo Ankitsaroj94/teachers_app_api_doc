@@ -1,0 +1,27 @@
+meta {
+  name: MyLeavesAndAttendance
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{staffBase}}SMT/MyLeavesAndAttendance
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "UserSysId": 121106,
+      "SiteId": 67,
+      "StaffId": 12241
+  }
+}
+
+settings {
+  encodeUrl: true
+}

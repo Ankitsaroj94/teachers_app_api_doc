@@ -1,0 +1,29 @@
+meta {
+  name: MessageContacts
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/MessageContacts
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "SiteId": 47,
+       "UserSysId": 14906,
+       "Type": "student",
+       "SessionId": 640,
+       "StaffId": 6058
+  }
+}
+
+settings {
+  encodeUrl: true
+}

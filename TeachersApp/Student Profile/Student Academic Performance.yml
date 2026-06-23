@@ -1,0 +1,25 @@
+info:
+  name: Student Academic Performance
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StudentAcademicPerformance"
+  body:
+    type: json
+    data: |-
+      {
+        "StudentId": 32010,
+        "SessionId": 656,
+        "ExamForm": "191,192,193,194,195,196,197,207,249",
+        "ExamSubject": "625,627,628,629,630,631,633,650,1848,2099",
+        "UserSysId": 555
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+meta {
+  name: MaintenanceVersionCheck_1
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{staffBase}}Authentication/MaintenanceVersionCheck
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "AppName": "SHRICONNECTV2",
+      "VersionNumber": "1.0.0",
+      "DeviceType": "A"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

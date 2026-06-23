@@ -1,0 +1,29 @@
+meta {
+  name: StaffProfile
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StaffProfile
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "StaffId": 555,
+  "UserSysId": 1003,
+  "SiteId": 1,
+  "SessionId": 691,
+  "Date": "16-OCT-2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

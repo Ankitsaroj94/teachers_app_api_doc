@@ -1,0 +1,34 @@
+meta {
+  name: VerifyLoginOTP
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{staffBase}}SMT/VerifyLoginOTP
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "OTP": "596758",
+  "OTPID": "20",
+  "SchoolCode": "ABC",
+  "DeviceId": "123456",
+  "Devicetype": "A",
+  "Version": "1.0.0",
+  "Sourcepage": "F",
+  "Devicename": "Realme",
+  "DeviceModel": "RMX 11",
+  "DeviceOsVersion": "Android 13"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

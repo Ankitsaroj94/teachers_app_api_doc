@@ -1,0 +1,24 @@
+meta {
+  name: Assignment List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{staffBase}}SMT/AssignmentsList
+  body: text
+  auth: none
+}
+
+body:text {
+  {
+       "SiteId": 67.0,
+       "SessionId": 698,
+       "UserSysId": 121106,
+       "AssignmentDate": "27 Jan 2026"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

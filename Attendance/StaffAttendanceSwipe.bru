@@ -1,0 +1,27 @@
+meta {
+  name: StaffAttendanceSwipe
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StaffAttendanceSwipe
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "UserSysId": 555,
+  "StaffId": 8258
+  }
+}
+
+settings {
+  encodeUrl: true
+}

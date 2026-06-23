@@ -1,0 +1,28 @@
+meta {
+  name: StudentProfile
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StudentProfile
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "SiteId": 47,
+  "SessionId": 640,
+  "UserSysId": 5580,
+  "StudentId": 77528.0
+  }
+}
+
+settings {
+  encodeUrl: true
+}

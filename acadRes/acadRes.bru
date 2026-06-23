@@ -1,0 +1,28 @@
+meta {
+  name: acadRes
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/AcademicResourcesList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "SiteId": 67.0,
+       "SessionId": 698,
+       "UserSysId": 121106,
+       "Keyword": "hind"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

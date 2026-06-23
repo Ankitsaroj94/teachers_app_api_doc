@@ -1,0 +1,28 @@
+meta {
+  name: student attendance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/StudentAttendance
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 47,
+      "SessionId": 640,
+      "UserSysId": 55895,
+      "AttendanceDate": "22-AUG-2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+info:
+  name: Dashboard
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/Dashboard"
+  body:
+    type: json
+    data: |-
+      {
+        "SiteId": 47,
+        "SessionId": 768,
+        "StaffId": 6058,
+        "UserSysId": 14906,
+        "AccessLevel": 40
+      }
+  auth:
+    type: bearer
+    token: "{{staffToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

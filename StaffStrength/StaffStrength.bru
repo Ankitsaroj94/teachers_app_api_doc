@@ -1,0 +1,32 @@
+meta {
+  name: StaffStrength
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/StaffStrength
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "SiteId": 47.0,
+       "SessionId": 640,
+       "Mode": "monthly",
+       "RoleId": 0,
+       "Month": "0",
+       "UserSysId": 14906
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: StaffLeaveStatusList
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/StaffLeaveStatusList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+  "UserSysId": 14906,
+  "SiteId": 47,
+  "ListingType": "pending" 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

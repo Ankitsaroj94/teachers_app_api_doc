@@ -1,0 +1,43 @@
+meta {
+  name: Send Notification
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://us-central1-smt-notification.cloudfunctions.net/sendNotification
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "data": {
+          "tokens": [
+              "e8cbFHgGTTmYYj6C3dpBH5:APA91bHxXRgmTYftdO_44Z-LLtv7fnPex6OhEMD8vD0Ah20drc11gmP0io9tyGGVOjd-iJareq350lgUgGxF2PqqNl9vOnvITGRGDSRU2sTwVmCqiiK0MUo"
+          ],
+          "notification": {
+              "title": "Test Notification",
+              "body": "This is a test notification message."
+          },
+          "android": {
+              "priority": "high"
+          },
+          "apns": {
+              "headers": {
+                  "apns-priority": "10"
+              },
+              "payload": {
+                  "aps": {
+                      "sound": "default"
+                  }
+              }
+          },
+          "data": {}
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: Assignment List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{staffBase}}SMT/AssignmentsList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+       "SiteId": 67,
+       "SessionId": 698,
+       "UserSysId": 121106,
+       "AssignmentDate": "",
+       "FromDate": "01 Jan 2026",
+       "ToDate": "31 Jan 2026"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

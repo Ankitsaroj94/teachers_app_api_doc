@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "EventsList",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

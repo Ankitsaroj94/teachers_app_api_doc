@@ -1,0 +1,31 @@
+meta {
+  name: PaySlipDetail
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{staffBase}}SMT/PaySlipDetail
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  
+  {
+       "StaffId": 1626,
+       "UserSysId": 55895,
+       "StartDate": "01-Apr-2022",
+       "EndDate": "30-Apr-2022",
+       "LocationId": 47,
+       "BatchId": 498
+  }
+}
+
+settings {
+  encodeUrl: true
+}

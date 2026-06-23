@@ -1,0 +1,25 @@
+info:
+  name: CircularDetails
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{staffBase}}staff/CircularDetails"
+  body:
+    type: json
+    data: |-
+      {
+        "CircularId": 606,
+        "OrgId": 31,
+        "UserSysId": 14906
+      }
+  auth:
+    type: bearer
+    token: "{{staffToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

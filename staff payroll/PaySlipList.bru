@@ -1,0 +1,27 @@
+meta {
+  name: PaySlipList
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{staffBase}}SMT/PaySlipList
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": 2,
+      "UserSysId": 616,
+      "StaffId": 1626
+  }
+}
+
+settings {
+  encodeUrl: true
+}

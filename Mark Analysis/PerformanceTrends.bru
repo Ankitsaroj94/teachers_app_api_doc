@@ -1,0 +1,31 @@
+meta {
+  name: PerformanceTrends
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{staffBase}}SMT/PerformanceTrends
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{staffToken}}
+}
+
+body:json {
+  {
+      "SiteId": "26",
+      "SessionId": "530",
+      "FormId": "265",
+      "termid": "47",
+      "UserSysId": "121189",
+      "MarkType": "H",
+      "Type": "T"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
