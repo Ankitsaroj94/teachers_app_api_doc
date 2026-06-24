@@ -1,0 +1,8 @@
+name: UAT
+variables:
+  - name: staffBase
+    value: https://uat.shriconnect.net/StaffAPIV2/api/
+  - secret: true
+    name: staffToken
+  - name: USERID
+    value: tarun.agarwal

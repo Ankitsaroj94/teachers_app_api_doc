@@ -1,0 +1,24 @@
+name: PROD
+variables:
+  - name: staffBase
+    value: https://shriconnect.net/SMTAppAPI/api/
+  - secret: true
+    name: staffToken
+  - name: STAFFID
+    value: ""
+  - name: SITEID
+    value: ""
+  - name: ORGID
+    value: ""
+  - name: ACADYEAR
+    value: ""
+  - name: USERSYSID
+    value: ""
+  - name: USERID
+    value: ""
+  - name: LOCID
+    value: ""
+  - name: AccessLevel
+    value: ""
+  - name: StaffNumber
+    value: ""
