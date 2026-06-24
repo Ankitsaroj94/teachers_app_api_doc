@@ -1,0 +1,36 @@
+info:
+  name: Post Resource Booking
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{staffBase}}Staff/PostResourceBooking"
+  body:
+    type: json
+    data: |-
+      {
+        "LocId": 1,
+        "UserSysId": 125405,
+        "StaffId": 125405,
+        "ResourceId": 21,
+        "StartDate": "26-May-2026",
+        "EndDate": "29-Jun-2026",
+        "StartTime": "12:30",
+        "EndTime": "13:00",
+        "Comment": "test5 ",
+        "RecurrenceType": "C",
+        "PatternType": "W",
+        "RecurrenceEvery": 1,
+        "RecurrenceDayno": 0,
+        "RecurrenceWeekDay": "2",
+        "EventName": "test3",
+        "IsSaturdayTrue": "N"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

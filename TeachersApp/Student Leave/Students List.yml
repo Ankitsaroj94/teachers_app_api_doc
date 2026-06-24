@@ -1,0 +1,24 @@
+info:
+  name: Students List
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/StudentsList"
+  body:
+    type: json
+    data: |-
+      {
+      "SiteId": 47,
+      "SessionId": 768,
+      "ClassId": 1243,
+      "UserSysId": 555
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

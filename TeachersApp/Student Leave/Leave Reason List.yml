@@ -1,0 +1,23 @@
+info:
+  name: Leave Reason List
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/LeaveReasonList"
+  body:
+    type: json
+    data: |-
+      {
+      "OrgId": 31,
+      "LeaveType": "L",
+      "UserSysId": 123145
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

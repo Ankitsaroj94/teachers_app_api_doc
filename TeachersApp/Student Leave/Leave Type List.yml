@@ -1,0 +1,23 @@
+info:
+  name: Leave Type List
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/LeaveTypeList"
+  body:
+    type: json
+    data: |-
+      {
+      "SiteId": 47,
+      "SessionId": 768,
+      "UserSysId":555
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

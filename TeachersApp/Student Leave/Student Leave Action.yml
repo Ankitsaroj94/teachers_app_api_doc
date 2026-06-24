@@ -1,0 +1,60 @@
+info:
+  name: Student Leave Action
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{staffBase}}Staff/StudentLeaveAction"
+  body:
+    type: form-urlencoded
+    data:
+      - name: SiteId
+        value: "47"
+      - name: SessionId
+        value: "768"
+      - name: UserSysId
+        value: "555"
+      - name: StudentIds
+        value: “144972,138017”
+        disabled: true
+      - name: ClassId
+        value: "1234"
+        disabled: true
+      - name: ApplicationDate
+        value: “08 Jun 2026”
+        disabled: true
+      - name: LeaveType
+        value: '"L"'
+        disabled: true
+      - name: FromDate
+        value: “09 Jun 2026”
+        disabled: true
+      - name: FromSession
+        value: '"M"'
+        disabled: true
+      - name: ToDate
+        value: “10 Jun 2026”
+        disabled: true
+      - name: ToSession
+        value: '"E"'
+        disabled: true
+      - name: Reason
+        value: "393"
+        disabled: true
+      - name: Remarks
+        value: “Inter-School Competition.”
+        disabled: true
+      - name: LeaveIds
+        value: “785274,785275”
+      - name: Action
+        value: '"A"'
+      - name: Comment
+        value: '"Approved"'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

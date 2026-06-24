@@ -1,0 +1,52 @@
+info:
+  name: Create Assignment
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{staffBase}}Staff/CreateAssignment"
+  body:
+    type: form-urlencoded
+    data:
+      - name: FileAttachments
+        value: File Attachments to be uploaded as Supporting Resources for the Home-work Assignment.
+      - name: SessionId
+        value: "768"
+      - name: FormId
+        value: "429"
+      - name: SubjectId
+        value: "1534"
+      - name: HomeworkName
+        value: "Test Home-work Assignment,Dated: 25 May '26"
+      - name: DisplayDateTime
+        value: 20 May 2026 11:50
+      - name: ClassAllFlag
+        value: "1"
+      - name: TypeId
+        value: "77"
+      - name: Content
+        value: TESTING, PLEASE IGNORE!
+      - name: ClassIdList
+        value: 1243,5707
+      - name: PortalFromDate
+        value: 20 May 2026
+      - name: PortalToDate
+        value: 30 May 2026
+      - name: Completion
+        value: "1"
+      - name: Upload
+        value: "1"
+      - name: UserSysId
+        value: "555"
+      - name: SiteId
+        value: "47"
+      - name: AttachmentFlag
+        value: Y
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
