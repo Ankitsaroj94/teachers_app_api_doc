@@ -1,0 +1,7 @@
+info:
+  name: Year Plan
+  type: folder
+  seq: 16
+
+request:
+  auth: inherit

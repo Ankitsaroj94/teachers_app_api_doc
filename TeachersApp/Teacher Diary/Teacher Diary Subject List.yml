@@ -1,0 +1,26 @@
+info:
+  name: Teacher Diary Subject List
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/TeacherDiarySubjectList"
+  body:
+    type: json
+    data: |-
+      {
+      "SiteId": 47,
+      "SessionId": 768,
+      "UserSysId": 555,
+      "AccessLevel": 20,
+      "ClassIds": "1243",
+      "StaffId": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

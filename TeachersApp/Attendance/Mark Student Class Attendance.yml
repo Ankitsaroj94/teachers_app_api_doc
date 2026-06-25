@@ -1,0 +1,46 @@
+info:
+  name: Mark Student Class Attendance
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{staffBase}}Staff/MarkStudentClassAttendance"
+  body:
+    type: json
+    data: |-
+      {
+        "ClassId": 1243,
+        "SessionId": 768,
+        "Date": "25 MAY 2026",
+        "UserSysId": 555,
+        "StudentAttendance": [
+          {
+            "StudentID": 144972,
+            "MorningAttendance": "P",
+            "EveningAttendance": "P",
+            "Late": "N",
+            "ImproperUniform": "N",
+            "LeftEarly": "N",
+            "AttendanceStatus": "A",
+            "LeaveApprovalStatus": "N"
+          },
+          {
+            "StudentID": 138017,
+            "MorningAttendance": "P",
+            "EveningAttendance": "P",
+            "Late": "N",
+            "ImproperUniform": "N",
+            "LeftEarly": "N",
+            "AttendanceStatus": "A",
+            "LeaveApprovalStatus": "N"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

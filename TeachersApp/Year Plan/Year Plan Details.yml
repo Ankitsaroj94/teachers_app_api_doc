@@ -1,0 +1,26 @@
+info:
+  name: Year Plan Details
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/YearPlanDetails"
+  body:
+    type: json
+    data: |-
+      {
+      "SiteId": 47,
+      "UserSysId": 555,
+      "SessionId": 768,
+      "ClassId": 1243,
+      "SubjectId": 1140,
+      "BandId": 33001
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

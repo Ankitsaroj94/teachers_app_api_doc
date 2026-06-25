@@ -1,0 +1,31 @@
+info:
+  name: Teacher Diary List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/TeacherDiaryList"
+  body:
+    type: json
+    data: |-
+      {
+      "OrgId": 31,
+      "SiteId": 47,
+      "UserSysId": 555,
+      "Year": 2026,
+      "StaffId": 0,
+      "ClassId": 0,
+      "SubjectId": 0,
+      "AccessLevel": 20,
+      "FromDate": "31-May-2026",
+      "ToDate": "29-Jun-2026",
+      "CoverageStatus": ""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

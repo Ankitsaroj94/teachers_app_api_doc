@@ -1,0 +1,38 @@
+info:
+  name: Teacher Diary Save
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{staffBase}}Staff/TeacherDiarySave"
+  body:
+    type: json
+    data: |-
+      {
+        "SiteId": 18,
+        "SessionId": 810,
+        "UserSysId": 123456,
+        "ClassId": 4172,
+        "SubjectId": 699,
+        "SubTopicId": 83930,
+        "StartDate": "07-06-2026",
+        "AcademicResourceId": 152,
+        "PeriodNo": "13552",
+        "CoverageStatus": "C",
+        "Percentage": "100",
+        "LessonSummary": "Introduction to Quadratic Equations",
+        "Remarks": "Students showed good understanding",
+        "Source": "NCERT Textbook",
+        "MeteredLP": "N",
+        "HomeworkAssigned": "N",
+        "AttendanceCount": 49,
+        "TDId": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

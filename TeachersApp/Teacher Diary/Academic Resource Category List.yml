@@ -1,0 +1,22 @@
+info:
+  name: Academic Resource Category List
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{staffBase}}Staff/AcademicResourceCategoryList"
+  body:
+    type: json
+    data: |-
+      {
+      "ClassId": 1302,
+      "UserSysId": 555
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
