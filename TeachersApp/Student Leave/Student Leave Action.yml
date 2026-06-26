@@ -48,9 +48,10 @@ http:
       - name: LeaveIds
         value: “785274,785275”
       - name: Action
-        value: '"A"'
+        value: A
       - name: Comment
         value: '"Approved"'
+        disabled: true
   auth: inherit
 
 settings:

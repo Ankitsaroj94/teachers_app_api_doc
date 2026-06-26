@@ -10,7 +10,10 @@ http:
     type: form-urlencoded
     data:
       - name: FileAttachments
-        value: File Attachments to be uploaded as Supporting Resources for the Home-work Assignment.
+        value: |-
+          File Attachments to be uploaded
+          as Supporting Resources for the
+          Home-work Assignment.
       - name: SessionId
         value: "768"
       - name: FormId

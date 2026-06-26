@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{staffBase}}Staff/StudentsList"
+  url: "{{staffBase}}Staff/StudentList"
   body:
     type: json
     data: |-
